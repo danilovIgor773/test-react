@@ -25778,7 +25778,11 @@ var _react = _interopRequireDefault(require("react"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var Person = function Person() {};
+var Person = function Person(props) {
+  return _react.default.createElement("div", {
+    className: "person"
+  }, _react.default.createElement("h1", null, props.name), _react.default.createElement("p", null, props.age));
+};
 
 var _default = Person;
 exports.default = _default;
@@ -25825,16 +25829,9 @@ function (_React$Component) {
   }
 
   _createClass(App, [{
-    key: "handleTitleClick",
-    value: function handleTitleClick() {
-      alert("you clicked the title!");
-    }
-  }, {
     key: "render",
     value: function render() {
-      return _react.default.createElement("div", null, _react.default.createElement("h1", {
-        onClick: this.handleTitleClick
-      }, "Adopt Me!"), _react.default.createElement(_Pet.default, {
+      return _react.default.createElement("div", null, _react.default.createElement("h1", null, "Adopt Me!"), _react.default.createElement(_Pet.default, {
         name: "Luna",
         animal: "dog",
         breed: "Havanese"
@@ -25846,6 +25843,9 @@ function (_React$Component) {
         name: "Doink",
         animal: "cat",
         breed: "Mixed"
+      }), _react.default.createElement(_Person.default, {
+        name: "Igor",
+        age: "28"
       }));
     }
   }]);
@@ -25853,7 +25853,7 @@ function (_React$Component) {
   return App;
 }(_react.default.Component);
 
-(0, _reactDom.render)(_react.default.createElement(App), document.getElementById("root"));
+(0, _reactDom.render)(_react.default.createElement(App, null), document.getElementById("root"));
 },{"react":"../node_modules/react/index.js","react-dom":"../node_modules/react-dom/index.js","./Pet":"Pet.js","./Person":"Person.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -25882,7 +25882,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "36665" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "43737" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
