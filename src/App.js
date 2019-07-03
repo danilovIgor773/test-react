@@ -1,6 +1,7 @@
 import React from "react";
 import { render } from "react-dom";
 import Pet from "./Pet";
+import Person from "./Person";
 
 class App extends React.Component {
   handleTitleClick() {
