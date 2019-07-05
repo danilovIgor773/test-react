@@ -25781,7 +25781,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var Person = function Person(props) {
   return _react.default.createElement("div", {
     className: "person"
-  }, _react.default.createElement("h1", null, props.name), _react.default.createElement("p", null, props.age));
+  }, _react.default.createElement("h1", null, props.name), _react.default.createElement("p", null, "Your age: ", props.age));
 };
 
 var _default = Person;
@@ -25882,7 +25882,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "43737" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "36665" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
